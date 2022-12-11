@@ -9,6 +9,10 @@ public class Vuelo extends DatosBase{
         this.directo = directo;
     }
 
+    public boolean getDirecto(){
+        return this.directo;
+    }
+
     @Override
     public String toString() {
         if(directo){
