@@ -10,7 +10,7 @@ public class Vuelo extends DatosBase {
     }
 
     public boolean getDirecto(){
-        return this.directo;
+        return directo;
     }
 
     @Override
