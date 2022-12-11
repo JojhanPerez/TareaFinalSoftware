@@ -1,9 +1,8 @@
 package vuelos;
 
-public class Ruta extends DatosBase{   
+public class Ruta extends DatosBase {
 
-    /*constructor */
-    public Ruta(String origen, String destino, double duracion, double precio){
+    public Ruta(String origen, String destino, double duracion, double precio) {
         super(origen, destino, duracion, precio);
     }
 
@@ -12,5 +11,4 @@ public class Ruta extends DatosBase{
         return super.getOrigen() + " " + super.getDestino() + " " + super.getDuracion() + " " + super.getPrecio();
     }
 
-    
 }

@@ -12,26 +12,25 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.simple.parser.ParseException;
+
 public class LectorJSON {
 
     private String nombreArchivo;
-    
-    
-    public LectorJSON(String ruta){
+
+    public LectorJSON(String ruta) {
         this.nombreArchivo = ruta;
     }
 
-    public JSONArray leerDatosJSON() throws IOException{
-        Path rutaArchivo = Paths.get("src/main/java/david/" + nombreArchivo);
+    public JSONArray leerDatosJSON() throws IOException {
+        Path rutaArchivo = Paths.get("src/main/java/vuelos/" + nombreArchivo);
         BufferedReader lector = Files.newBufferedReader(rutaArchivo);
         String datos = "";
         String linea;
-        while((linea = lector.readLine()) != null){
+        while ((linea = lector.readLine()) != null) {
             datos = datos + linea;
         }
         JSONArray jsonArray = new JSONArray(datos);
         return jsonArray;
     }
-    
 
 }

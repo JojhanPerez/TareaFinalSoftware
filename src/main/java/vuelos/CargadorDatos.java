@@ -7,18 +7,19 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class CargadorDatos{
+public class CargadorDatos {
 
-    public CargadorDatos(){
+    public CargadorDatos() {
 
     }
-    public List<Ruta> cargarDatos() throws IOException{
+
+    public List<Ruta> cargarDatos() throws IOException {
         LectorJSON lector = new LectorJSON("Rutas.json");
         JSONArray rutasJson = lector.leerDatosJSON();
         List<Ruta> rutas = new ArrayList<>();
 
         for (int i = 0; i < rutasJson.length(); i++) {
-            JSONObject explrObject = rutasJson.getJSONObject(i);  
+            JSONObject explrObject = rutasJson.getJSONObject(i);
             String origen = explrObject.get("origen").toString();
             String destino = explrObject.get("destino").toString();
             double precio = Double.valueOf(explrObject.get("precio").toString());
@@ -27,9 +28,6 @@ public class CargadorDatos{
             rutas.add(ruta);
         }
         return rutas;
-
-        
-
 
     }
 }
