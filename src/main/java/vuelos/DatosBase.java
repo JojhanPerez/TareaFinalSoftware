@@ -6,23 +6,26 @@ public abstract class DatosBase {
     private double duracion;
     private double precio;
 
-    public DatosBase(String origen, String destino, double duracion, double precio){
+    public DatosBase(String origen, String destino, double duracion, double precio) {
         this.origen = origen;
         this.destino = destino;
         this.duracion = duracion;
         this.precio = precio;
     }
 
-    public String getOrigen(){
+    public String getOrigen() {
         return this.origen;
     }
-    public String getDestino(){
+
+    public String getDestino() {
         return this.destino;
     }
-    public double getDuracion(){
+
+    public double getDuracion() {
         return this.duracion;
     }
-    public double getPrecio(){
+
+    public double getPrecio() {
         return this.precio;
     }
 }
