@@ -1,4 +1,4 @@
-package david;
+package vuelos;
 
 public class Vuelo extends DatosBase{   
     private boolean directo;

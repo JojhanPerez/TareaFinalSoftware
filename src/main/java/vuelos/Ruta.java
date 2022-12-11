@@ -1,4 +1,4 @@
-package david;
+package vuelos;
 
 public class Ruta extends DatosBase{   
 

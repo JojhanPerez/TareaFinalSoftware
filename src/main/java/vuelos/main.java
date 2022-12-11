@@ -1,4 +1,4 @@
-package david;
+package vuelos;
 
 public class main{
     public static void main(String[] args) {
