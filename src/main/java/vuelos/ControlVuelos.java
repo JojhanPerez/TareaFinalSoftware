@@ -62,12 +62,19 @@ public class ControlVuelos {
             System.out.println("No se han encontrado vuelos con origen en " + origen + " y destino en " + destino);
             return;
         }
+        String mensajeEscala = "";
         System.out.println("Los posibles vuelos son:");
         for(int i = 0; i < posiblesVuelos.size(); i++){
+            if(posiblesVuelos.get(i).getDirecto()){
+                mensajeEscala = "Con esacala";
+            }else{
+                mensajeEscala = "Sin escala";
+            }
             System.out.println("De " + posiblesVuelos.get(i).getOrigen() + 
             " Hacia " + posiblesVuelos.get(i).getDestino() + 
             " Con una duración de " + posiblesVuelos.get(i).getDuracion() + 
-            " horas y un precio de " + posiblesVuelos.get(i).getPrecio());
+            " horas y un precio de " + posiblesVuelos.get(i).getPrecio() +
+            " " + mensajeEscala);
         }
     }
 
