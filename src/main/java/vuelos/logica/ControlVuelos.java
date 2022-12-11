@@ -1,8 +1,11 @@
-package vuelos;
+package vuelos.logica;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import vuelos.entidades.Ruta;
+import vuelos.entidades.Vuelo;
 
 public class ControlVuelos {
     private List<Ruta> rutas;

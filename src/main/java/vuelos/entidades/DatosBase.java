@@ -1,4 +1,4 @@
-package vuelos;
+package vuelos.entidades;
 
 public abstract class DatosBase {
     private String origen;

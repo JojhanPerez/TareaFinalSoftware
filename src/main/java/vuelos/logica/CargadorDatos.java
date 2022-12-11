@@ -1,4 +1,4 @@
-package vuelos;
+package vuelos.logica;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -6,6 +6,9 @@ import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import vuelos.datos.LectorJSON;
+import vuelos.entidades.Ruta;
 
 public class CargadorDatos {
 

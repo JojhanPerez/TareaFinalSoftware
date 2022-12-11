@@ -1,4 +1,4 @@
-package vuelos;
+package vuelos.entidades;
 
 public class Vuelo extends DatosBase {
     private boolean directo;
@@ -9,7 +9,7 @@ public class Vuelo extends DatosBase {
         this.directo = directo;
     }
 
-    public boolean getDirecto(){
+    public boolean getDirecto() {
         return directo;
     }
 

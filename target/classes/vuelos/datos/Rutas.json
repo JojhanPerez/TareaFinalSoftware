@@ -1,0 +1,74 @@
+[
+    {
+        "origen": "Manizales",
+        "destino": "Medellin",
+        "duracion": 1.5,
+        "precio": 95000.0
+    },
+    {
+        "origen": "Medellin",
+        "destino": "Cartagena",
+        "duracion": 3.5,
+        "precio": 295000.0
+    },
+    {
+        "origen": "Pereira",
+        "destino": "Cartagena",
+        "duracion": 2,
+        "precio": 300000.0
+    },
+    {
+        "origen": "Manizales",
+        "destino": "Bogota",
+        "duracion": 0.8,
+        "precio": 150000.0
+    },
+    {
+        "origen": "Pereira",
+        "destino": "San Andres",
+        "duracion": 1.5,
+        "precio": 400000.0
+    },
+    {
+        "origen": "Bogota",
+        "destino": "Santa Marta",
+        "duracion": 2.5,
+        "precio": 200000.0
+    },
+    {
+        "origen": "Pereira",
+        "destino": "Barranquilla",
+        "duracion": 1,
+        "precio": 270000.0
+    },
+    {
+        "origen": "Barranquilla",
+        "destino": "Cartagena",
+        "duracion": 0.5,
+        "precio": 130000.0
+    },
+    {
+        "origen": "Medellin",
+        "destino": "Leticia",
+        "duracion": 4,
+        "precio": 500000.0
+    },
+    {
+        "origen": "Bogota",
+        "destino": "Cartagena",
+        "duracion": 2.5,
+        "precio": 240000.0
+    },
+    {
+        "origen": "Pereira",
+        "destino": "Bogota",
+        "duracion": 1,
+        "precio": 100000.0
+    },
+    {
+        "origen": "Bogota",
+        "destino": "Barranquilla",
+        "duracion": 2,
+        "precio": 160000.0
+    }
+]

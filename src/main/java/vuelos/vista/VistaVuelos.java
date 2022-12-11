@@ -1,16 +1,16 @@
-package vuelos;
+package vuelos.vista;
 
 import java.util.Scanner;
 
-public class main {
+import vuelos.logica.ControlVuelos;
 
-    public static void main(String[] args) {
+public class VistaVuelos {
 
-        interaccionUsuario();
+    public VistaVuelos() {
 
     }
 
-    public static void interaccionUsuario() {
+    public void interaccionUsuario() {
 
         Scanner datosUsuario = new Scanner(System.in);
         String origen;
@@ -26,4 +26,5 @@ public class main {
         control.cargarDatosIniciales();
         control.mostrarVuelos(origen, destino);
     }
+
 }

@@ -1,4 +1,4 @@
-package vuelos;
+package vuelos.datos;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,7 +16,7 @@ public class LectorJSON {
     }
 
     public JSONArray leerDatosJSON() throws IOException {
-        Path rutaArchivo = Paths.get("src/main/java/vuelos/" + nombreArchivo);
+        Path rutaArchivo = Paths.get("src/main/java/vuelos/datos/" + nombreArchivo);
         BufferedReader lector = Files.newBufferedReader(rutaArchivo);
         String datos = "";
         String linea;
