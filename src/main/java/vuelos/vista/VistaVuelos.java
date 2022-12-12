@@ -6,8 +6,42 @@ import vuelos.logica.ControlVuelos;
 
 public class VistaVuelos {
 
+    private ControlVuelos control = new ControlVuelos();
+
     public VistaVuelos() {
 
+    }
+
+
+    public void mostrarVuelos(String origen, String destino) {
+
+        this.control.crearVuelos(origen, destino);
+
+        if (this.control.getPosiblesVuelos().isEmpty()) {
+            System.out.println("No se han encontrado vuelos con origen en " + origen + " y destino en " + destino);
+            return;
+        }
+        String mensajeEscala = "";
+        String esp = " ";
+        System.out.println();
+        System.out.print(esp.repeat(30));
+        System.out.println("Los posibles vuelos son:");
+        String srt = "-";
+        System.out.println(srt.repeat(120));
+        for (int i = 0; i < this.control.getPosiblesVuelos().size(); i++) {
+            if (this.control.getPosiblesVuelos().get(i).getDirecto()) {
+                mensajeEscala = "Sin escala";
+            } else {
+                mensajeEscala = "Con escala";
+            }
+            System.out.println("De " + this.control.getPosiblesVuelos().get(i).getOrigen() +
+                    " Hacia " + this.control.getPosiblesVuelos().get(i).getDestino() +
+                    " Con una duración de " + this.control.getPosiblesVuelos().get(i).getDuracion() +
+                    " horas y un precio de " + this.control.getPosiblesVuelos().get(i).getPrecio() +
+                    " " + mensajeEscala);
+            mensajeEscala = " ";
+        }
+        System.out.println(srt.repeat(120));
     }
 
     public void interaccionUsuario() {
@@ -22,9 +56,8 @@ public class VistaVuelos {
         System.out.print("Ingrese la ciudad a la cual quiere viajar: ");
         destino = datosUsuario.nextLine();
 
-        ControlVuelos control = new ControlVuelos();
-        control.cargarDatosIniciales();
-        control.mostrarVuelos(origen, destino);
+        this.control.cargarDatosIniciales();
+        mostrarVuelos(origen, destino);
     }
 
 }

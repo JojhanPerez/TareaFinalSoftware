@@ -6,9 +6,4 @@ public class Ruta extends DatosBase {
         super(origen, destino, duracion, precio);
     }
 
-    @Override
-    public String toString() {
-        return super.getOrigen() + " " + super.getDestino() + " " + super.getDuracion() + " " + super.getPrecio();
-    }
-
 }

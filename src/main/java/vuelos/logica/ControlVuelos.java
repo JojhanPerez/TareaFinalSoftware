@@ -15,6 +15,10 @@ public class ControlVuelos {
 
     }
 
+    public List<Vuelo> getPosiblesVuelos() {
+        return posiblesVuelos;
+    }
+
     public void cargarDatosIniciales() {
         try {
             CargadorDatos cargador = new CargadorDatos();
@@ -81,37 +85,6 @@ public class ControlVuelos {
                     .add(new Vuelo(ruta.getOrigen(), ruta.getDestino(), ruta.getDuracion(), ruta.getPrecio(), true));
         }
 
-    }
-
-    public void mostrarVuelos(String origen, String destino) {
-
-        crearVuelos(origen, destino);
-
-        if (posiblesVuelos.isEmpty()) {
-            System.out.println("No se han encontrado vuelos con origen en " + origen + " y destino en " + destino);
-            return;
-        }
-        String mensajeEscala = "";
-        String esp = " ";
-        System.out.println();
-        System.out.print(esp.repeat(30));
-        System.out.println("Los posibles vuelos son:");
-        String srt = "-";
-        System.out.println(srt.repeat(120));
-        for (int i = 0; i < posiblesVuelos.size(); i++) {
-            if (posiblesVuelos.get(i).getDirecto()) {
-                mensajeEscala = "Sin escala";
-            } else {
-                mensajeEscala = "Con escala";
-            }
-            System.out.println("De " + posiblesVuelos.get(i).getOrigen() +
-                    " Hacia " + posiblesVuelos.get(i).getDestino() +
-                    " Con una duración de " + posiblesVuelos.get(i).getDuracion() +
-                    " horas y un precio de " + posiblesVuelos.get(i).getPrecio() +
-                    " " + mensajeEscala);
-            mensajeEscala = " ";
-        }
-        System.out.println(srt.repeat(120));
     }
 
 }

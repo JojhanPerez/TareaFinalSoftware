@@ -13,14 +13,4 @@ public class Vuelo extends DatosBase {
         return directo;
     }
 
-    @Override
-    public String toString() {
-        if (directo) {
-            return super.getOrigen() + " " + super.getDestino() + " " + super.getDuracion() + " " + super.getPrecio()
-                    + " Con escala";
-        }
-        return super.getOrigen() + " " + super.getDestino() + " " + super.getDuracion() + " " + super.getPrecio()
-                + " Sin escala";
-    }
-
 }
