@@ -15,6 +15,12 @@ public class LectorJSON {
         this.nombreArchivo = ruta;
     }
 
+    /**
+     * Este metodo se encarga de seguir una ruta que lo lleva  a un archivo json
+     * y mediante este genera un JSONArray con la informacion retenida
+     * @return jsonArray
+     * @throws IOException
+     */
     public JSONArray leerDatosJSON() throws IOException {
         Path rutaArchivo = Paths.get("src/main/java/vuelos/datos/" + nombreArchivo);
         BufferedReader lector = Files.newBufferedReader(rutaArchivo);

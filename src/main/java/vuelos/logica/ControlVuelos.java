@@ -19,6 +19,10 @@ public class ControlVuelos {
         return posiblesVuelos;
     }
 
+    /**
+     * Este metodo instancia un objeto de tipo cargador datos
+     * y usa el metodo cargarDatos de este para empezar a llenar la lista.
+     */
     public void cargarDatosIniciales() {
         try {
             CargadorDatos cargador = new CargadorDatos();
@@ -28,6 +32,14 @@ public class ControlVuelos {
         }
     }
 
+    /**
+     * Este metodo se encarga de llenar una lista con 
+     * las rutas directas segun la información entregada
+     * por el usuario.
+     * @param origen
+     * @param destino
+     * @return rutasSinEscala
+     */
     public List<Ruta> buscarRutasSinEscala(String origen, String destino) {
 
         List<Ruta> rutasSinEscala = new ArrayList<>();
@@ -45,6 +57,14 @@ public class ControlVuelos {
         return rutasSinEscala;
     }
 
+    /**
+     * Este metodo se encarga de llenar una lista con 
+     * las rutas indirectas segun la información entregada
+     * por el usuario.
+     * @param origen
+     * @param destino
+     * @return rutasConEscala
+     */
     public List<Ruta> buscarRutasConEscala(String origen, String destino) {
 
         List<Ruta> rutasConEscala = new ArrayList<>();
@@ -70,6 +90,12 @@ public class ControlVuelos {
         return rutasConEscala;
     }
 
+    /**
+     * Este metodo se encarga de crear los vuelos diferenciando 
+     * segun si son vuelos indirectos o directos
+     * @param origen
+     * @param destino
+     */
     public void crearVuelos(String origen, String destino) {
 
         List<Ruta> rutasConEscala = buscarRutasConEscala(origen, destino);

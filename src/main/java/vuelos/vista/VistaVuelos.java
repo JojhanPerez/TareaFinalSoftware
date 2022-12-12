@@ -12,7 +12,13 @@ public class VistaVuelos {
 
     }
 
-
+    /**
+     * Este metodo se encarga de mostrar los vuelos que cumplen 
+     * con los requisitos del usuario diferenciandolos entre si son con 
+     * escala o no.
+     * @param origen
+     * @param destino
+     */
     public void mostrarVuelos(String origen, String destino) {
 
         this.control.crearVuelos(origen, destino);
@@ -43,7 +49,10 @@ public class VistaVuelos {
         }
         System.out.println(srt.repeat(120));
     }
-
+    
+    /**
+     * Este metodo se encarga de solicitar el destino y el origen al usuario
+     */
     public void interaccionUsuario() {
 
         Scanner datosUsuario = new Scanner(System.in);

@@ -16,6 +16,12 @@ public class CargadorDatos {
 
     }
 
+    /**
+     * Este metodo se encarga de crear las rutas con la informacion contenida en
+     * el jsonArray y las añade a un ArrayList
+     * @return rutas
+     * @throws IOException
+     */
     public List<Ruta> cargarDatos() throws IOException {
         LectorJSON lector = new LectorJSON("Rutas.json");
         JSONArray rutasJson = lector.leerDatosJSON();
