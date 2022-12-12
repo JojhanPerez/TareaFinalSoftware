@@ -38,7 +38,7 @@ public class ControlVuelosTest {
     }
 
     @Test
-    public void origenODestinoNoEncontrados(){
+    public void listaDeRutasVacia(){
         List<Ruta> rutasEsperadas = new ArrayList<>();
         ControlVuelos control = new ControlVuelos();
         List<Ruta> rutasEsperadas2 = new ArrayList<>();
