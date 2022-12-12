@@ -38,13 +38,17 @@
       <version>20220924</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
-<dependency>
-    <groupId>com.googlecode.json-simple</groupId>
-    <artifactId>json-simple</artifactId>
-    <version>1.1.1</version>
-</dependency>
-
-
+    <dependency>
+      <groupId>com.googlecode.json-simple</groupId>
+      <artifactId>json-simple</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
@@ -88,6 +92,40 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
+        </plugin>
+        <plugin>
+            <groupId>com.mysema.maven</groupId>
+            <artifactId>apt-maven-plugin</artifactId>
+            <version>${apt.maven.plugin.version}</version>
+            <executions>
+                <execution>
+                    <id>generate-source-entities</id>
+                    <phase>generate-sources</phase>
+                    <goals>
+                        <goal>process</goal>
+                    </goals>
+                    <configuration>
+                        <outputDirectory>${project.build.directory}/generated</outputDirectory>
+                        <processor>com.querydsl.apt.jpa.JPAAnnotationProcessor</processor>
+                    </configuration>
+                </execution>
+                <execution>
+                    <id>generate-test-entities</id>
+                    <phase>generate-test-sources</phase>
+                    <goals>
+                        <goal>test-process</goal>
+                    </goals>
+                    <configuration>
+                        <outputDirectory>${project.build.directory}/generated</outputDirectory>
+                        <processor>com.querydsl.apt.jpa.JPAAnnotationProcessor</processor>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.22.2</version>
         </plugin>
       </plugins>
     </pluginManagement>
